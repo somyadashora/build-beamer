@@ -1,0 +1,26 @@
+from: markdown_strict+pipe_tables+footnotes+backtick_code_blocks+auto_identifiers+strikeout+yaml_metadata_block+implicit_figures+all_symbols_escapable+link_attributes+smart+fenced_divs+raw_tex+latex_macros+multiline_tables+table_captions+fenced_code_attributes+citations
+input-files:
+file-scope: false # Parse each file individually before combining for multifile documents. This will allow footnotes in different files with the same identifiers to work as expected. If this option is set, footnotes and links will not work across files.
+to: beamer
+standalone: true
+template: default_mod.latex
+include-in-header: "build-beamer/pandoc/templates/my_preamble.tex"
+data-dir: "build-beamer/pandoc"
+shift-heading-level-by: 0
+slide-level: 3
+dpi: 300
+toc: true
+listings: true
+# variant: markdown_strict+pipe_tables+backtick_code_blocks+auto_identifiers+strikeout+yaml_metadata_block+implicit_figures+all_symbols_escapable+link_attributes+smart+fenced_divs+raw_tex+latex_macros+multiline_tables
+# output-file: MMU-HLD.pdf
+pdf-engine: xelatex
+citeproc: true
+# csl: IEEE
+# data-dir: . # A reference.odt, reference.docx, epub.css, templates, slidy, slideous, or s5 directory placed in this directory will override pandoc’s normal defaults.
+abbreviations: # Specifies a custom abbreviations file, with abbreviations one to a line.
+verbosity: WARNING # ERROR, WARNING, or INFO
+log-file: ./log.json
+top-level-division: section # part, chapter, section, or default:
+cite-method: citeproc # citeproc, natbib, or biblatex
+reference-location: document # block, section, or document
+highlight-style: tango

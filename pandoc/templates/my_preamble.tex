@@ -1,0 +1,106 @@
+% my_preamble.tex
+
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{utopia} %font utopia imported
+
+\usepackage{hyperref}
+\hypersetup{
+    % colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+
+\usepackage{caption}
+\captionsetup[figure]{skip=0pt,font={tiny,it},justification=centering}
+
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multicol}
+\usepackage[export]{adjustbox}
+
+\definecolor{amethyst}{rgb}{0.6, 0.4, 0.8}
+\definecolor{celestialblue}{rgb}{0.29, 0.59, 0.82}
+\definecolor{columbiablue}{rgb}{0.61, 0.87, 1.0}
+\definecolor{cornflowerblue}{rgb}{0.39, 0.58, 0.93}
+\definecolor{coolgrey}{rgb}{0.55, 0.57, 0.67}
+\definecolor{darkpastelblue}{rgb}{0.47, 0.62, 0.8}
+\definecolor{dodgerblue}{rgb}{0.12, 0.56, 1.0}
+\definecolor{cadmiumgreen}{rgb}{0.0, 0.42, 0.24}
+\definecolor{UBCblue}{rgb}{0.04706, 0.13725, 0.26667} % UBC Blue (primary)
+
+\definecolor{skymagenta}{rgb}{0.81, 0.44, 0.69}
+
+% \usecolortheme[named=skymagenta]{structure}
+
+% \setbeamertemplate{background canvas}[vertical shading][bottom=white!70,top=blue!30]
+% \setbeamertemplate{background canvas}[vertical shading][top=blue!75!cyan!33,bottom=white!66!green!33,middle=blue!6!green!33]
+\setbeamertemplate{background canvas}[vertical shading][top=cornflowerblue!20!white!80,bottom=dodgerblue!50!white!50]
+
+% \beamertemplateshadingbackground{white!70}{blue!30}
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+
+% \renewcommand*{\figureautorefname}{Fig.}
+
+% Now passed from YAML
+% \author[Somya, Kalash] % (optional)
+% {Somya Dashora \and Kalash Bhavin Shah}
+
+% \titlegraphic{\includegraphics[width=3.5cm]{../img/ceremorphic-logo.png}}
+
+% \institute[Ceremorphic] % (optional)
+% {
+%     % \inst{1}%
+%     \texttt{somya.dashora@ceremorphic.com
+%     \\
+%     % \inst{2}%
+%     kalash.bhavin@ceremorphic.com}
+% }
+
+% \date[\texttt{ver-2.0.0} \hspace{0.2cm} \textbf{|} \hspace{0.2cm} 28 Oct, 2021]
+% {Ceremorphic Internal Presentation,\\ 28\textsuperscript{th} October 2021}
+
+% \logo{\includegraphics[height=0.5cm]{img/MIPS.png}\vspace{-0.25cm} \hspace{0.02cm}}
+
+
+\renewcommand{\footnotesize}{\fontsize{6pt}{2pt}\selectfont}
+\setbeamerfont{frametitle}{size=\fontsize{15}{6}\selectfont}
+\setbeamercolor{frametitle}{bg=coolgrey!20}
+\setbeamercolor{footnote mark}{fg=cadmiumgreen}
+\setbeamerfont{page number in head/foot}{series=\bfseries}
+
+% \logo{\includegraphics[height=0.5cm]{../img/ceremorphic-logo.png}}
+
+%The next block of commands puts the table of contents at the
+%beginning of each section and highlights the current section:
+
+\AtBeginSection[]
+{
+  \begin{frame}
+   \begin{multicols}{2}
+     \small
+     \bfseries
+     \renewcommand{\baselinestretch}{0.65}\normalsize
+     \frametitle{Table of Contents}
+     \tableofcontents[currentsection]
+   \end{multicols}
+  \end{frame}
+     \renewcommand{\baselinestretch}{1.00}\normalsize
+}
+
+% \AtBeginSection[]
+% {
+%     \begin{frame}
+%         \frametitle{Table of Contents}
+%         \tableofcontents[currentsection]
+%     \end{frame}
+% }
