@@ -4,8 +4,8 @@ file-scope: false # Parse each file individually before combining for multifile 
 to: beamer
 standalone: true
 template: default_mod.latex
-include-in-header: "build-beamer/pandoc/templates/my_preamble.tex"
-data-dir: "build-beamer/pandoc"
+include-in-header: "../pandoc/templates/my_preamble.tex"
+data-dir: "../pandoc"
 shift-heading-level-by: 0
 slide-level: 3
 dpi: 300
@@ -19,7 +19,7 @@ citeproc: true
 # data-dir: . # A reference.odt, reference.docx, epub.css, templates, slidy, slideous, or s5 directory placed in this directory will override pandoc’s normal defaults.
 abbreviations: # Specifies a custom abbreviations file, with abbreviations one to a line.
 verbosity: WARNING # ERROR, WARNING, or INFO
-log-file: ./log.json
+log-file: "out/log.json"
 top-level-division: section # part, chapter, section, or default:
 cite-method: citeproc # citeproc, natbib, or biblatex
 reference-location: document # block, section, or document

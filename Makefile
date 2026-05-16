@@ -1,7 +1,12 @@
+BEAMERS := power-arch-tech-beamer
 
+.PHONY: all clean $(BEAMERS)
+all: $(BEAMERS)
 
+$(BEAMERS):
+	mkdir -p $@/out
+	docker run --rm --volume "$(PWD):/data" -w /data/$@ pandoc/extra \
+		-d ../beamer.yaml $@.md -o $@.pdf
 
-
-run:
-	docker run --rm --volume "$(PWD)/..:/data" -w /data pandoc/extra -d build-beamer/beamer.yaml src/iommu-intro.md -o docker.pdf
-
+clean:
+	rm -rf $(addsuffix /out,$(BEAMERS))
