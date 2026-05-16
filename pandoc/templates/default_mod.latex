@@ -455,7 +455,7 @@ $endif$
 
 $if(beamer)$
 $if(institute)$
-\institute[\href{$website$}{$institute$}]{ \texttt{$for(author-email)$$author-email$$sep$ \\ $endfor$}}
+\institute[\href{$website$}{$institute$}]{\texttt{$for(author-email)$$author-email$$sep$ \\ $endfor$} \\[0.4em] $institute$}
 $endif$
 $if(titlegraphic)$
 % \titlegraphic{\includegraphics{$titlegraphic$}}

@@ -7,9 +7,9 @@ version: 1.0.0
 author:
 - Somya Dashora
 author-email:
-- somya.dashora@ceremorphic.com
+- somyadashora@gmail.com
 
-institute: Ceremorphic
+institute: My Musings on Computer Architecture
 date: 15 Feb 2022
 date-title: 15
 month-title: Feburary
@@ -18,7 +18,7 @@ year-title: 2022
 # classoption:
 #   - handout
 
-titlegraphic: ../img/ceremorphic-logo.png # Change in my_preamble.tex
+# titlegraphic handled in my_preamble.tex via \sdlogolarge TikZ command
 # email: change author email in my_preamble.tex
 # institute: Ceremorphic Internal Presentation
 # date: 10/23/2021
