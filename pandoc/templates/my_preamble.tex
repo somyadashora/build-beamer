@@ -36,11 +36,21 @@
 \definecolor{logodark}{rgb}{0.043, 0.176, 0.451}   % #0B2D73 navy
 \definecolor{logomid}{rgb}{0.086, 0.376, 0.741}    % #1560BD blue
 \definecolor{logolight}{rgb}{0.290, 0.624, 0.835}  % #4A9FD5 accent
+\definecolor{chipgreen}{rgb}{0.09, 0.31, 0.13}     % PCB green substrate
+\definecolor{gridgreen}{rgb}{0.16, 0.45, 0.21}     % PCB green grid lines
 
 % SD chip badge — used in footer
 \newcommand{\sdlogosmall}{%
 \begin{tikzpicture}[baseline=-1pt, x=1pt, y=1pt]
   \fill[logodark, rounded corners=2pt] (0,0) rectangle (22,22);
+  % Green PCB grid interior
+  \fill[chipgreen, rounded corners=1pt] (2,2) rectangle (20,20);
+  \foreach \x in {4,6,8,10,12,14,16,18} {
+    \draw[gridgreen, line width=0.2pt] (\x,2) -- (\x,20);
+  }
+  \foreach \y in {4,6,8,10,12,14,16,18} {
+    \draw[gridgreen, line width=0.2pt] (2,\y) -- (20,\y);
+  }
   \draw[logolight, line width=0.5pt, rounded corners=1pt] (2,2) rectangle (20,20);
   \foreach \y in {6,11,16} {
     \draw[logolight, line width=0.8pt] (-4,\y) -- (2,\y);
@@ -59,6 +69,14 @@
 \begin{tikzpicture}[x=1pt, y=1pt]
   % Chip body
   \fill[logodark, rounded corners=5pt] (0,0) rectangle (70,70);
+  % Green PCB grid interior
+  \fill[chipgreen, rounded corners=3pt] (5,5) rectangle (65,65);
+  \foreach \x in {10,15,20,25,30,35,40,45,50,55,60} {
+    \draw[gridgreen, line width=0.4pt] (\x,5) -- (\x,65);
+  }
+  \foreach \y in {10,15,20,25,30,35,40,45,50,55,60} {
+    \draw[gridgreen, line width=0.4pt] (5,\y) -- (65,\y);
+  }
   \draw[logolight, line width=0.8pt, rounded corners=3pt] (5,5) rectangle (65,65);
   % Left pins
   \foreach \y in {18,35,52} {
